@@ -1,5 +1,5 @@
 import Just_Dail_Scrapper
 import constant
 
-Just_Dail_Scrapper.scrapfun()
+Just_Dail_Scrapper.scraper()
 
