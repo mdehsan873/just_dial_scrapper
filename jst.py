@@ -6,11 +6,13 @@ import csv
 
 
 def get_name(body):
-	return body.find('span', {'class':'jcn'}).a.string
+	nameclass='jcn'
+	return body.find('span', {'class':nameclass}).a.string
 
 def get_phone_number(body):
+	contactclass='contact-info'
 	try:
-		return body.find('p', {'class':'contact-info'}).span.a.string
+		return body.find('p', {'class':contactclass}).span.a.string
 	except AttributeError:
 		return ''
 
