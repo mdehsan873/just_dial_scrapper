@@ -1,18 +1,16 @@
 from bs4 import BeautifulSoup
 import urllib
 import csv
-
+import constant
 
 
 
 def get_name(body):
-	nameclass='jcn'
-	return body.find('span', {'class':nameclass}).a.string
+	return body.find('span', {'class':constant.nameclass}).a.string
 
 def get_phone_number(body):
-	contactclass='contact-info'
 	try:
-		return body.find('p', {'class':contactclass}).span.a.string
+		return body.find('p', {'class':'contact-info'}).span.a.string
 	except AttributeError:
 		return ''
 
@@ -35,8 +33,8 @@ while True:
 	if page_number > 10:
 		break
 
-	url="https://www.justdial.com/Mumbai/Electricians"
-	req = urllib.request.Request(url, headers={'User-Agent' : "Magic Browser"}) 
+	
+	req = urllib.request.Request(constant.url, headers={'User-Agent' : "Magic Browser"}) 
 	page = urllib.request.urlopen( req )
 
 
