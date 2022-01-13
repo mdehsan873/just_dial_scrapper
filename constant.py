@@ -1,9 +1,8 @@
 #class name for electricain name
-nameclass='jcn'
+Name_Class='jcn'
 #class name for electricain info
-contactclass='contact-info'
+Contact_Class='contact-info'
 #class name for electricain add
-addressclass='mrehover'
+Address_Class='mrehover'
 #Scrapped Url
-url="https://www.justdial.com/Mumbai/Electricians"
-
+URL="https://www.justdial.com/Mumbai/Electricians"
