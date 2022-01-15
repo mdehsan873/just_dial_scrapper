@@ -5,16 +5,13 @@ import constant
 
 
 def getDetails(body):
-	name= body.find('span', {'class':constant.Name_Class}).a.string
-	phone=body.find('p', {'class':constant.Contact_Class}).span.a.string
-	address=body.find('span', {'class':constant.Address_Class}).text.strip()
+	name= body.find('span', {'class':constant.NAME_CLASS}).a.string
+	phone=body.find('p', {'class':constant.CONTACT_CLASS}).span.a.string
+	address=body.find('span', {'class':constant.ADDRESS_CLASS}).text.strip()
 	dict_service = {}
-	if name:
-		dict_service['Name']=name
-	if phone:
-		dict_service['Phone']=phone
-	if address:
-		dict_service['Address']=address
+	dict_service['Name']=name
+	dict_service['Phone']=phone
+	dict_service['Address']=address
 	print(dict_service)
 	return dict_service
 
