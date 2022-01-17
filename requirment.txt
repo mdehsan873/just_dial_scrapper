@@ -1,1 +1,0 @@
-we need to intall bs4 package to run this scrapper
